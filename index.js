@@ -22,7 +22,7 @@ const path = require('path');
   if (jest) {
     // Get the coverage directory path from config;
   	// and the coverage summary file;
-  	const coverageDirectory = jest.coverageDirectory;
+  	const coverageDirectory = jest.coverageDirectory ? jest.coverageDirectory : 'coverage';
   	const coverageSummaryPath = (coverageDirectory)? path.resolve(root, coverageDirectory, 'coverage-summary.json'): null;
 
   	// Make sure we have code coverage thresholds in
